@@ -1,0 +1,35 @@
+{ "menu" :
+  [
+    {
+      "item" : "Burger Cevap",
+      "image" : "garaza.png",
+      "text" : "",
+      "ingredients" : "",
+    },
+    {
+      "item" : "Burger Cevap",
+      "image" : "garaza.png",
+      "text" : "",
+      "ingredients" : "",
+    },
+    {
+      "item" : "Burger Cevap",
+      "image" : "garaza.png",
+      "text" : "",
+      "ingredients" : "",
+    },
+    {
+      "item" : "Burger Cevap",
+      "image" : "garaza.png",
+      "text" : "",
+      "ingredients" : "",
+    },
+    {
+      "item" : "Burger Cevap",
+      "image" : "garaza.png",
+      "text" : "",
+      "ingredients" : "",
+    }
+
+  ]
+}

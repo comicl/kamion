@@ -1,0 +1,36 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
+  "main": "public/index.html",
+  "author": "Luka Comic",
+  "scripts": {
+    "build:sass": "sass  --no-source-map src/scss:css",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:views": "onchange '*.html'",
+    "watch:sass": "sass  --watch src/scss:css --style compressed",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start  --server --files \"css/*.css\" *.html",
+
+    "web:prepare": "npm-run-all --parallel watch serve postbuild",
+    "start": "concurrently  npm:web:*",
+    "postbuild": "postcss css/*.css -u autoprefixer cssnano -r ",
+    "tunnel": "lt -p 8080 -o --print-requests"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "browser-sync": "^2.27.7",
+    "concurrently": "^7.0.0",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.1.13",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.17",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.1"
+  }
+}
