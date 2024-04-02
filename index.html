@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
           rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -17,13 +17,30 @@
 </head>
 <body>
 <style>
-    .h1, .h2, .h3, .h4, .h5, .h6 {
-        font-family: "Lato", sans-serif;
-        font-weight: 700;
+    .h1, .h2, .h3, .h4, .h5, .h6, .navbar-nav, .btn {
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.1rem;
+        font-weight: 400;
+    }
+
+    .btn-outline-primary {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        text-shadow: 0 0 3px black;
+        border-radius: 0;
+        border: 3px solid #000;
+    }
+
+    .btn-outline-primary:hover {
+        background: #000;
+        color: #fff;
+        border: 3px solid #000;
     }
 
     body {
-        font-family: "Open Sans", sans-serif;
+        font-family: "Roboto", sans-serif;
     }
 
     #home {
@@ -48,6 +65,25 @@
         top: 30px;
         right: 30px;
         z-index: -1;
+    }
+
+    .menu-item-variant {
+        min-height: 300px;
+    }
+
+    .menu-item-variant img {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .menu-item-variant-1 {
+        background: #333;
+        color: #fff;
+    }
+
+    .order-section {
+        aspect-ratio: 1/1;
+        max-width: 250px;
     }
 
 
@@ -179,7 +215,7 @@
         <div class="offset-md-8 col-md-4  text-center text-md-start">
             <div class="h1">Kamion Food Truck</div>
             <p>Savršeno gastronomsko rešenje za sve vaše događaje na otvorenom</p>
-            <a class="btn btn-primary" href="#about">Vidi Više</a>
+            <a class="btn btn-outline-primary px-5" href="#about">Vidi Više</a>
         </div>
     </div>
 </div>
@@ -215,7 +251,7 @@
                 <div class="card border-0">
                     <img class="card-img-top mx-auto" src="img/IMG_6785.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <p class="h6">DOSTAVA NA KUĆNU ADRESU</p>
+                        <p class="h5">DOSTAVA NA KUĆNU ADRESU</p>
                         <p class="card-text">Možete nas naći na aplikacijama za dostavu hrane Wolt i MrD kao i da
                             poručite preko telefona <br>
                             062-656 490</p>
@@ -226,7 +262,7 @@
                 <div class="card border-0">
                     <img class="card-img-top mx-auto" src="img/MNP07163_46782739303277.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <p class="h6">FOOD TRUCK KETERING</p>
+                        <p class="h5">FOOD TRUCK KETERING</p>
                         <p class="card-text">Možete nas kontaktirati za sve proslave, manifestacije, tim building i za
                             sva ostala dešavanja
                             koja planirate na otvorenom.</p>
@@ -237,7 +273,7 @@
                 <div class="card border-0">
                     <img class="card-img-top mx-auto" src="img/IMG_6738.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <p class="h6">ILI NAS POSETITE</p>
+                        <p class="h5">ILI NAS POSETITE</p>
                         <p class="card-text">Ako želite da uživate u našoj hrani i ambijentu možete nas naći na jednoj
                             od naše dve stalne
                             lokacije.</p>
@@ -256,17 +292,19 @@
         <div class="d-inline-block standard-menu text-white text-center">
             <div class="h2 ">SIGNATURE MENI</div>
             <p>(Ovo je naša standarna ponuda koja se može menjati za potrebe keteringa)</p>
+
+
         </div>
 
     </div>
     <div class="container">
         <div class="row  justify-content-center">
-            <div class="col-md-8">
-                <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="row justify-content-center align-items-center menu-item-variant menu-item-variant-1">
                     <div class="col-md-5">
                         <img src="img/cevap.png" alt="Burger Cevap" class="img-fluid">
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <div class="h3 title">Burger Ćevap</div>
                         <br>
                         <p>Ćevap, pržena slanina, topljeni sir, feta krem, BBQ sos, honey mustard, karamelizovani luk,
@@ -274,96 +312,125 @@
 
                     </div>
                 </div>
-                <div class="row justify-center align-items-center">
+                <div class="row justify-content-center align-items-center menu-item-variant menu-item-variant-2">
                     <div class="col-md-5 order-md-2">
                         <img src="img/bavarska.png" alt="Burger Cevap" class="img-fluid">
                     </div>
-                    <div class="col-md-7 order-md-1">
+                    <div class="col-md-6 order-md-1">
                         <div class="h3 title">Bavarska Kobasica</div>
                         <br>
                         <p>Pileća kobasica, pržena slanina, feta krem, honey mustard, paradajz salsa</p>
                     </div>
 
                 </div>
-                <div class="row justify-center align-items-center">
-                    <div class="col-md-5 position-relative egg-parent">
-                        <img src="img/dare.png" alt="" class="egg egg-1">
-                        <img src="img/batak.png" alt="Dimljeni Batak" class="img-fluid">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="h3 title">Dimljeni Batak</div>
-                        <br>
-                        <p>Dimljeni batak, topljeni sir, šampinjoni, feta krem, kamion sos, zelena salata, kiseli crveni
-                            luk</p>
-
-                    </div>
-                </div>
-                <div class="row justify-center align-items-center">
-                    <div class="col-md-5 order-md-2">
+                <div class="row justify-content-center align-items-center menu-item-variant menu-item-variant-1">
+                    <div class="col-md-5 ">
                         <img src="img/garaza.png" alt="Burger Cevap" class="img-fluid">
                     </div>
-                    <div class="col-md-7 order-md-1">
+                    <div class="col-md-6 ">
                         <div class="h3 title">Garaža sendvič</div>
                         <br>
                         <p>150g ćevap, topljeni sir, hrskavi luk, kiseli krastavčići, garaža sendvič sos</p>
                     </div>
 
                 </div>
-                <div class="row justify-center align-items-center">
-                    <div class="col-md-5">
+                <div class="row justify-content-center align-items-center menu-item-variant menu-item-variant-2">
+                    <div class="col-md-5 position-relative egg-parent order-md-2">
+                        <img src="img/dare.png" alt="" class="egg egg-1">
+                        <img src="img/batak.png" alt="Dimljeni Batak" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <div class="h3 title">Dimljeni Batak</div>
+                        <br>
+                        <p>Dimljeni batak, topljeni sir, šampinjoni, feta krem, kamion sos, zelena salata, kiseli
+                            crveni
+                            luk</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex flex-column">
+                <div class="row justify-content-center align-items-center menu-item-variant menu-item-variant-1 order-0 order-md-last">
+                    <div class="col-md-5 order-md-2">
                         <img src="img/hotdog.png" alt="Burger Cevap" class="img-fluid">
                     </div>
-                    <div class="col-md-7">
-                        <div class="h3 title">Hot Dog</div>
+                    <div class="col-md-6">
+                        <div class="h3 title order-md-1">Hot Dog</div>
                         <br>
                         <p>Senf, Kečap i Majonez</p>
 
                     </div>
                 </div>
-                <div class="row justify-center align-items-center">
-                    <div class="col-md-5 order-md-2">
-                        <img src="img/pikant.png" alt="Burger Cevap" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 order-md-1">
-                        <div class="h3 title">Pikant Kobasica</div>
-                        <br>
-                        <p>Dimljena pikant kobasica, paradajz salsa</p>
-                    </div>
-
-                </div>
-                <div class="row justify-center align-items-center">
+                <div class="row justify-content-center align-items-center menu-item-variant menu-item-variant-2">
                     <div class="col-md-5">
-                        <img src="img/sirobaja.png" alt="Burger Cevap" class="img-fluid">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="h3 title">Kobasica sa Sirom</div>
-                        <br>
-                        <p>Kobasica sa sirom, pržena slanina, topljeni sir, senf sa renom, zelena salata, nacho</p>
-
-                    </div>
-                </div>
-                <div class="row justify-center align-items-center">
-                    <div class="col-md-5 order-md-2">
                         <img src="img/slaninica.png" alt="Burger Cevap" class="img-fluid">
                     </div>
-                    <div class="col-md-7 order-md-1">
+                    <div class="col-md-6">
                         <div class="h3 title">Slaninica Sendvic</div>
                         <br>
                         <p>Pržena slanina, topljeni sir, feta krem, habanero sos, zelena salata</p>
                     </div>
 
                 </div>
+                <div class="row justify-content-center align-items-center menu-item-variant menu-item-variant-1">
+                    <div class="col-md-5 order-md-2">
+                        <img src="img/pikant.png" alt="Burger Cevap" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <div class="h3 title">Pikant Kobasica</div>
+                        <br>
+                        <p>Dimljena pikant kobasica, paradajz salsa</p>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center align-items-center menu-item-variant menu-item-variant-2">
+                    <div class="col-md-5">
+                        <img src="img/sirobaja.png" alt="Burger Cevap" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h3 title">Kobasica sa Sirom</div>
+                        <br>
+                        <p>Kobasica sa sirom, pržena slanina, topljeni sir, senf sa renom, zelena salata, nacho</p>
+
+                    </div>
+                </div>
+
+
             </div>
+
         </div>
     </div>
 
 </div>
-<div id="order">
-    Links to Glovo Wolt and Phone
+
+<div id="gallery">
+
 </div>
-<div id="locations"></div>
-<div id="contact">
+
+<div id="order">
     <div class="container">
+        <div class="row text-center justify-content-center">
+            <div class="col-md-2">
+                <a href="https://wolt.com/sr/srb/novi_sad/restaurant/garaa-kamion-food-truck">
+                    <img src="img/Wolt.svg" alt="" class="w-100 order-section">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="https://misterd.rs/place/kamion-garaza-kamion-food-truck-dostava">
+                    <img src="img/mrd_app-logo.svg" alt="" class="w-100 order-section">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="tel:" class="">
+                    <img src="img/phone-1.svg" class="w-100 p-2 bg-light order-section rounded-1" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact" class="bg-dark text-white py-5">
+    <div class="container ">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-6">
                 <div data-bs-toggle="collapse"
@@ -388,7 +455,8 @@
                 <p>Ili preko drustvenih mreža</p>
                 <p>Instagram <a href="https://www.instagram.com/kamion_food_truck/">https://www.instagram.com/kamion_food_truck/</a>
                 </p>
-                <p>Facebook <a href="https://www.facebook.com/kamion.food/">https://www.facebook.com/kamion.food/</a>
+                <p>Facebook <a
+                        href="https://www.facebook.com/kamion.food/">https://www.facebook.com/kamion.food/</a>
                 </p>
 
             </div>
