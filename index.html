@@ -17,10 +17,51 @@
 </head>
 <body>
 <style>
+
+
+    .marquee {
+        width: 100%;
+        flex-direction: column;
+        /*  justify-content: center;
+          align-items: stretch;*/
+        display: flex;
+        overflow: hidden;
+    }
+
+    .marquee-slider__list {
+        /*flex: none;*/
+        display: flex;
+        flex-flow: row;
+        /* align-items: stretch; */
+        justify-content: center;
+        transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.38, 1.399);
+    }
+
+    .marquee-slider__list--item {
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        max-width: 260px;
+        min-height: 260px;
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .marquee-slider__list--item img {
+        aspect-ratio: 1; /* same as aspect-ratio: 1/1 — see below */
+        object-fit: cover;
+    }
+
     .h1, .h2, .h3, .h4, .h5, .h6, .navbar-nav, .btn {
         font-family: "Bebas Neue", sans-serif;
         letter-spacing: 0.1rem;
         font-weight: 400;
+    }
+
+    .btn {
+        border-radius: 0;
     }
 
     .btn-outline-primary {
@@ -29,14 +70,22 @@
         background: rgba(0, 0, 0, 0.2);
         color: #fff;
         text-shadow: 0 0 3px black;
-        border-radius: 0;
-        border: 3px solid #000;
+        border: 3px solid #101010;
     }
 
     .btn-outline-primary:hover {
-        background: #000;
+        background: #101010;
         color: #fff;
-        border: 3px solid #000;
+        border: 3px solid #101010;
+    }
+
+    .btn-default {
+        color: #fff;
+        background: #101010;
+    }
+
+    .btn-default:hover {
+        box-shadow: 0 0 0 3px #101010;
     }
 
     body {
@@ -49,23 +98,36 @@
 
     }
 
+
+    .egg {
+
+        position: absolute;
+        transition: 500ms ease;
+    }
+
+    .egg-1 {
+        width: 100px;
+        top: 30px;
+        right: 30px;
+        z-index: -1;
+    }
+
     .egg-parent:hover .egg-1 {
         top: -45px;
         right: 10px;
 
     }
 
-    .egg {
-        width: 100px;
-        position: absolute;
-        transition: 500ms ease;
+    img.egg-icons, .egg-icons img {
+        height: 30px;
+        width: 30px;
+        filter: invert(0.5);
     }
 
-    .egg-1 {
-        top: 30px;
-        right: 30px;
-        z-index: -1;
+    input[type=checkbox]:checked + img {
+        filter: invert(1);
     }
+
 
     .menu-item-variant {
         min-height: 300px;
@@ -130,8 +192,8 @@
         aspect-ratio: 1; /* same as aspect-ratio: 1/1 — see below */
         object-fit: cover;
         border-radius: 50%;
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
     }
 
     .bg-transition {
@@ -221,8 +283,20 @@
 </div>
 
 
-<div id="about" class="bg-dark py-5 text-white">
+<div id="about" class="bg-dark py-5 text-white position-relative">
+    <!-- <label class="egg egg-icons" ><input type="checkbox"  class="d-none"><img
+             src="img/food-truck.png" class="img-fluid" alt=""></label>
+     <label class="egg egg-icons" ><input type="checkbox"  class="d-none"><img
+             src="img/hotdog-icon.png" class="img-fluid" alt=""></label>
+     <label class="egg egg-icons" ><input type="checkbox"  class="d-none"><img
+             src="img/french-fries.png" class="img-fluid" alt=""></label>
+
+
+     <img src="img/food-truck.png" class="egg egg-icons egg-multiple" alt="">
+     <img src="img/french-fries.png" class="egg egg-icons egg-multiple" alt="">
+     <img src="img/hotdog-icon.png" class="egg egg-icons egg-multiple" alt="">-->
     <div class="container ">
+
         <div class="row align-items-center">
             <div class="offset-md-1 col-md-3">
                 <img src="img/MNP05330%20(1).jpg" class="img-fluid" alt="">
@@ -244,39 +318,48 @@
 
     </div>
 </div>
+
+
 <div id="services">
     <div class="container py-5">
+        <h2 class="h2 text-center">Usluge</h2><br>
         <div class="row justify-content-center text-center">
-            <div class="col-md-3">
-                <div class="card border-0">
+            <div class="col-md-4">
+                <div class="card border-0 h-100">
                     <img class="card-img-top mx-auto" src="img/IMG_6785.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="h5">DOSTAVA NA KUĆNU ADRESU</p>
-                        <p class="card-text">Možete nas naći na aplikacijama za dostavu hrane Wolt i MrD kao i da
-                            poručite preko telefona <br>
-                            062-656 490</p>
+                    <div class="card-body d-flex flex-column">
+                        <div class="card-body-text mt-4 mb-5"><p class="h5 mb-4">DOSTAVA NA KUĆNU ADRESU</p>
+                            <p class="card-text">Poručite na aplikacijama za dostavu hrane Wolt i MrD kao i da
+                                poručite preko telefona
+                                062-656 490</p></div>
+                        <a href="#order" class="btn btn-default w-100 mt-auto">Naruči</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card border-0">
+            <div class="col-md-4">
+                <div class="card border-0 h-100">
                     <img class="card-img-top mx-auto" src="img/MNP07163_46782739303277.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="h5">FOOD TRUCK KETERING</p>
-                        <p class="card-text">Možete nas kontaktirati za sve proslave, manifestacije, tim building i za
-                            sva ostala dešavanja
-                            koja planirate na otvorenom.</p>
+                    <div class="card-body d-flex flex-column">
+                        <div class="card-body-text mt-4 mb-5"><p class="h5 mb-4">FOOD TRUCK KETERING</p>
+                            <p class="card-text">Možete nas kontaktirati za sve proslave, manifestacije, tim building i
+                                za
+                                sva ostala dešavanja
+                                koja planirate na otvorenom.</p></div>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeleZhnnMAtf5Z9nAgOCm-OCehDIkXSjlqM1rGu1Ocfewtoew/viewform"
+                           class="btn btn-default w-100 mt-auto">Popunite Formu</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card border-0">
+            <div class="col-md-4">
+                <div class="card border-0 h-100">
                     <img class="card-img-top mx-auto" src="img/IMG_6738.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="h5">ILI NAS POSETITE</p>
-                        <p class="card-text">Ako želite da uživate u našoj hrani i ambijentu možete nas naći na jednoj
-                            od naše dve stalne
-                            lokacije.</p>
+                    <div class="card-body d-flex flex-column">
+                        <div class="card-body-text mt-4 mb-5"><p class="h5 mb-4">ILI NAS POSETITE</p>
+                            <p class="card-text">Ako želite da uživate u našoj hrani i ambijentu možete nas naći na
+                                jednoj
+                                od naše dve stalne
+                                lokacije.</p></div>
+                        <a href="#contact" class="btn btn-default w-100 mt-auto">Lokacije</a>
                     </div>
                 </div>
             </div>
@@ -403,28 +486,133 @@
 
 </div>
 
-<div id="gallery">
+<div id="gallery" class="bg-dark py-5 my-5">
+    <div class="marquee">
+        <ul class="marquee-slider__list">
 
+            <li class="marquee-slider__list--item"><img src="img/slide/DSC06774.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6757.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6761.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6763.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6767.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/1.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6774.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_7507.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_7538.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_7593.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP07216.jpg" class="img-fluid" alt=""></li>
+            <!-- Add more items as needed -->
+        </ul>
+
+        <ul class="marquee-slider__list">
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_7616.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8489 (1).jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8494.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8508.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8528.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8587.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/IMG_67533.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP04346.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05269.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05280.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP09376.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP07287 (1).jpg" class="img-fluid" alt=""></li>
+            <!-- Add more items as needed -->
+        </ul>
+
+        <ul class="marquee-slider__list">
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05313.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05321.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05344.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05345.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05476.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05491.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05494.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP05521.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP06048.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP06286_46783931875673.jpg" class="img-fluid"
+                                                        alt=""></li>
+            <li class="marquee-slider__list--item"><img src="img/slide/MNP07134_46786462029839 (1).jpg"
+                                                        class="img-fluid" alt=""></li>
+            <!-- Add more items as needed -->
+        </ul>
+
+    </div>
 </div>
 
 <div id="order">
-    <div class="container">
-        <div class="row text-center justify-content-center">
-            <div class="col-md-2">
-                <a href="https://wolt.com/sr/srb/novi_sad/restaurant/garaa-kamion-food-truck">
-                    <img src="img/Wolt.svg" alt="" class="w-100 order-section">
-                </a>
+    <div class="container my-5">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <h2 class="h2">Naruči Ovde</h2><br>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <a href="https://wolt.com/sr/srb/novi_sad/restaurant/garaa-kamion-food-truck">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-3"><img src="img/Wolt.svg" alt="" class="w-100 order-section"></div>
+                            <div class="col-md-9">
+                                https://wolt.com/sr/srb/novi_sad/restaurant/garaa-kamion-food-truck
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="https://misterd.rs/place/kamion-garaza-kamion-food-truck-dostava">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-3"> <img src="img/mrd_app-logo.svg" alt="" class="w-100 order-section"></div>
+                                <div class="col-md-9">
+                                    https://misterd.rs/place/kamion-garaza-kamion-food-truck-dostava
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="tel:+38162656490" class="">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-3"> <img src="img/phone-1.svg" class="w-100 p-2 bg-light order-section rounded-1" alt=""></div>
+                                <div class="col-md-9">
+                                    Dostava 062/656-490
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
             </div>
-            <div class="col-md-2">
-                <a href="https://misterd.rs/place/kamion-garaza-kamion-food-truck-dostava">
-                    <img src="img/mrd_app-logo.svg" alt="" class="w-100 order-section">
-                </a>
+
+            <div class="col-md-6 px-md-5">
+                <div class="h1 text-center">Top Rated</div>
+                <style>
+                    .gold-star svg{
+                        color : gold;
+                    }
+                </style>
+                <div class="d-flex justify-content-center align-items-center gold-star">
+                    <div class="col-1"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg></div>
+                    <div class="col-1"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg></div>
+                    <div class="col-2"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg></div>
+                    <div class="col-1"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg></div>
+                    <div class="col-1"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg></div>
+                </div>
+                <br>
+                <div class="">
+                <p>Da biste stekli uvid u iskustva naših dragih gostiju, pozivamo vas da pogledate recenzije naše usluge
+                    na različitim platformama. Otkrijte šta našu zajednicu čini srećnom!</p><br>
+
+                <p>Naši gosti su srce naše priče, a njihova iskustva su naša najveća nagrada. Pogledajte šta ljudi kažu
+                    o nama na Google-u, Woltu i Mister D sajtovima. Očekuju vas autentična iskustva, jer svaki komentar,
+                    svaki utisak, čini nas boljima.</p><br>
+
+                <p>Ovde možete da poručite a i da Istražite recenzije i otkrijte zašto nas naši gosti izdvajaju. Hvala
+                    vam što ste deo naše priče i što podržavate lokalnu zajednicu.</p>
+
+                </div>
             </div>
-            <div class="col-md-2">
-                <a href="tel:" class="">
-                    <img src="img/phone-1.svg" class="w-100 p-2 bg-light order-section rounded-1" alt="">
-                </a>
-            </div>
+
         </div>
     </div>
 </div>
@@ -497,5 +685,18 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./js/marquee.js"></script>
+<script>
+    $('.marquee').marqueeSlider([
+        {sensitivity: 0.1, repeatItems: true},
+        {sensitivity: 0.5, repeatItems: true},
+    ]);
+
+
+</script>
+
 </body>
 </html>
