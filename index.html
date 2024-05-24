@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kamion | Food Truck</title>
+    <meta name="description" content="Kamion Food Truck, idealno ketering rešenje za vaše dogadjaje">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -95,7 +96,7 @@
     }
 
     #home {
-        background: url("img/MNP05511.jpg") center center no-repeat;
+        background: url("img/MNP05511.jpg") bottom center no-repeat;
         background-size: cover;
 
     }
@@ -172,10 +173,20 @@
         font-size: 1.1em;
         padding: 0.5em 1em;
     }
+    .card-img-top {
+        aspect-ratio: 1; /* same as aspect-ratio: 1/1 — see below */
+        object-fit: cover;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
 
     @media screen and (min-width: 768px) {
+
+    }
+    @media screen and (min-width: 992px) {
         #home {
-            background: url("img/MNP05480.jpg") left center no-repeat;
+            background: url("img/MNP05480.jpg") right center no-repeat;
             background-size: cover;
 
         }
@@ -188,21 +199,16 @@
             margin-right: 0;
             padding: 0 1em;
         }
-    }
-
-    .card-img-top {
-        aspect-ratio: 1; /* same as aspect-ratio: 1/1 — see below */
-        object-fit: cover;
-        border-radius: 50%;
-        width: 300px;
-        height: 300px;
-    }
-    @media only screen and (max-width: 765px) {
         .card-img-top {
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
         }
     }
+
+
+
+
+
 
     .bg-transition {
         background: url("img/MNP07213.jpg") center center fixed no-repeat;
@@ -215,10 +221,10 @@
         padding: 30px 60px;
     }
     .hero-caret{
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+        opacity: 1;
         transform: scale(1);
         animation: pulse 2s infinite ease-in-out;
-
+        max-width: 70px
     }
 
     @keyframes pulse {
@@ -242,7 +248,7 @@
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand d-md-none text-white" href="#"><img src="img/logo.png" alt=""></a>
+        <a class="navbar-brand d-lg-none text-white" href="#"><img src="img/logo.png" alt=""></a>
         <button class="navbar-toggler rounded-0 border-white border-opacity-25" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -260,7 +266,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#services">Services</a>
                 </li>
-                <a class="navbar-brand d-none d-md-block" href="#">
+                <a class="navbar-brand d-none d-lg-block" href="#">
                     <img src="img/logo.png" alt="">
                 </a>
                 <li class="nav-item">
@@ -273,10 +279,10 @@
                     <a class="nav-link" href="#contact">Contact Us</a>
                 </li>
 
-                <li class="nav-item w-100 text-center  d-md-none">
+                <li class="nav-item w-100 text-center  d-lg-none">
                     <a class="nav-link bg-gradient bg-dark" href="tel:+38162656490">Dostava 062/656-490</a>
                 </li>
-                <li class="nav-item d-flex d-md-none">
+                <li class="nav-item d-flex d-lg-none">
                     <a class="nav-link" href="https://www.instagram.com/kamion_food_truck/">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                              class="bi bi-facebook" viewBox="0 0 16 16">
@@ -303,12 +309,13 @@
 </nav>
 
 <div class="container-fluid top-placeholder header" id="home">
-    <div class="row h-100 justify-content-center align-items-md-center pt-5 pt-md-0">
-        <div class="offset-md-8 col-md-4 text-center text-md-start pt-5 pt-md-0">
+    <div class="row h-100 justify-content-center align-items-lg-center pt-5 pt-lg-0">
+        <div class="offset-lg-6 offset-xl-8 col-lg-6 col-xl-4 text-center text-lg-start pt-5 pt-lg-0">
             <div class="h1">Kamion Food Truck</div>
             <p>Savršeno gastronomsko rešenje za sve vaše događaje na otvorenom</p>
             <a class="btn btn-outline-primary px-5" href="#about">Vidi Više</a>
-            <a class="d-md-none px-5 " href="#about"><svg class="w-25 hero-caret" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></a>
+            <br>
+            <a class="d-lg-none px-5 " href="#about"><svg class="w-25 hero-caret" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></a>
         </div>
     </div>
 </div>
@@ -318,10 +325,10 @@
     <div class="container ">
 
         <div class="row align-items-center">
-            <div class="offset-md-1 col-md-3">
+            <div class="offset-lg-1 col-md-5 col-lg-3">
                 <img src="img/MNP05330%20(1).jpg" class="img-fluid" alt="">
             </div>
-            <div class="offset-md-1 col-md-6">
+            <div class="offset-lg-1 col-md-7 col-lg-6">
                 <br>
                 <div class="h2">O nama</div>
                 <br>
