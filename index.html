@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Kamion | Food Truck</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -17,7 +17,9 @@
 </head>
 <body>
 <style>
-
+    .gold-star svg{
+        color : gold;
+    }
 
     .marquee {
         width: 100%;
@@ -195,6 +197,12 @@
         width: 300px;
         height: 300px;
     }
+    @media only screen and (max-width: 765px) {
+        .card-img-top {
+            width: 200px;
+            height: 200px;
+        }
+    }
 
     .bg-transition {
         background: url("img/MNP07213.jpg") center center fixed no-repeat;
@@ -206,17 +214,39 @@
         background: rgba(0, 0, 0, 0.5);
         padding: 30px 60px;
     }
+    .hero-caret{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+        transform: scale(1);
+        animation: pulse 2s infinite ease-in-out;
+
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+            opacity: 0.7;
+        }
+
+        70% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(0.95);
+            opacity: 0.7;
+        }
+    }
 
 
 </style>
-<nav class="navbar navbar-expand-lg bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-
         <a class="navbar-brand d-md-none text-white" href="#"><img src="img/logo.png" alt=""></a>
-        <button class="navbar-toggler bg-body bg-gradient" type="button" data-bs-toggle="collapse"
+        <button class="navbar-toggler rounded-0 border-white border-opacity-25" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <small>Menu</small>
+            <small class="small">Menu</small>
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -273,28 +303,18 @@
 </nav>
 
 <div class="container-fluid top-placeholder header" id="home">
-    <div class="row h-100 justify-content-center align-items-center">
-        <div class="offset-md-8 col-md-4  text-center text-md-start">
+    <div class="row h-100 justify-content-center align-items-md-center pt-5 pt-md-0">
+        <div class="offset-md-8 col-md-4 text-center text-md-start pt-5 pt-md-0">
             <div class="h1">Kamion Food Truck</div>
             <p>Savršeno gastronomsko rešenje za sve vaše događaje na otvorenom</p>
             <a class="btn btn-outline-primary px-5" href="#about">Vidi Više</a>
+            <a class="px-5 " href="#about"><svg class="w-25 hero-caret" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></a>
         </div>
     </div>
 </div>
 
 
 <div id="about" class="bg-dark py-5 text-white position-relative">
-    <!-- <label class="egg egg-icons" ><input type="checkbox"  class="d-none"><img
-             src="img/food-truck.png" class="img-fluid" alt=""></label>
-     <label class="egg egg-icons" ><input type="checkbox"  class="d-none"><img
-             src="img/hotdog-icon.png" class="img-fluid" alt=""></label>
-     <label class="egg egg-icons" ><input type="checkbox"  class="d-none"><img
-             src="img/french-fries.png" class="img-fluid" alt=""></label>
-
-
-     <img src="img/food-truck.png" class="egg egg-icons egg-multiple" alt="">
-     <img src="img/french-fries.png" class="egg egg-icons egg-multiple" alt="">
-     <img src="img/hotdog-icon.png" class="egg egg-icons egg-multiple" alt="">-->
     <div class="container ">
 
         <div class="row align-items-center">
@@ -324,11 +344,11 @@
     <div class="container py-5">
         <h2 class="h2 text-center">Usluge</h2><br>
         <div class="row justify-content-center text-center">
-            <div class="col-md-4">
+            <div class="col-md-4 py-5">
                 <div class="card border-0 h-100">
                     <img class="card-img-top mx-auto" src="img/IMG_6785.jpg" alt="Card image cap">
                     <div class="card-body d-flex flex-column">
-                        <div class="card-body-text mt-4 mb-5"><p class="h5 mb-4">DOSTAVA NA KUĆNU ADRESU</p>
+                        <div class="card-body-text mt-4 mb-3 mb-md-5"><p class="h5 mb-4">DOSTAVA NA KUĆNU ADRESU</p>
                             <p class="card-text">Poručite na aplikacijama za dostavu hrane Wolt i MrD kao i da
                                 poručite preko telefona
                                 062-656 490</p></div>
@@ -336,12 +356,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 py-5">
                 <div class="card border-0 h-100">
                     <img class="card-img-top mx-auto" src="img/MNP07163_46782739303277.jpg" alt="Card image cap">
                     <div class="card-body d-flex flex-column">
-                        <div class="card-body-text mt-4 mb-5"><p class="h5 mb-4">FOOD TRUCK KETERING</p>
-                            <p class="card-text">Možete nas kontaktirati za sve proslave, manifestacije, tim building i
+                        <div class="card-body-text mt-4 mb-3 mb-md-5"><p class="h5 mb-4">FOOD TRUCK KETERING</p>
+                            <p class="card-text">Možete nas kontaktirati, ili poslati upit, za sve proslave, manifestacije, tim building i
                                 za
                                 sva ostala dešavanja
                                 koja planirate na otvorenom.</p></div>
@@ -350,11 +370,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 py-5">
                 <div class="card border-0 h-100">
                     <img class="card-img-top mx-auto" src="img/IMG_6738.jpg" alt="Card image cap">
                     <div class="card-body d-flex flex-column">
-                        <div class="card-body-text mt-4 mb-5"><p class="h5 mb-4">ILI NAS POSETITE</p>
+                        <div class="card-body-text mt-4 mb-3 mb-md-5"><p class="h5 mb-4">ILI NAS POSETITE</p>
                             <p class="card-text">Ako želite da uživate u našoj hrani i ambijentu možete nas naći na
                                 jednoj
                                 od naše dve stalne
@@ -374,7 +394,7 @@
     <div class="bg-transition d-flex align-items-center justify-content-center">
         <div class="d-inline-block standard-menu text-white text-center">
             <div class="h2 ">SIGNATURE MENI</div>
-            <p>(Ovo je naša standarna ponuda koja se može menjati za potrebe keteringa)</p>
+            <p>Ovo je naša standarna ponuda koja se može menjati za potrebe keteringa</p>
 
 
         </div>
@@ -490,51 +510,56 @@
     <div class="marquee">
         <ul class="marquee-slider__list">
 
-            <li class="marquee-slider__list--item"><img src="img/slide/DSC06774.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6757.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6761.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6763.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6767.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/1.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_6774.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_7507.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_7538.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_7593.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP07216.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/DSC06774.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_6757.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_6761.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_6763.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_6767.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/1.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_6774.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_7507.jpg" class="img-fluid" alt=""></li>
+
             <!-- Add more items as needed -->
         </ul>
 
         <ul class="marquee-slider__list">
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_7616.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8489 (1).jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8494.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8508.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8528.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_8587.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/IMG_67533.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP04346.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05269.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05280.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP09376.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP07287 (1).jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_7616.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_8489 (1).jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_8494.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_8508.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_8528.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_8587.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_67533.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP04346.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05269.jpg" class="img-fluid" alt=""></li>
+
             <!-- Add more items as needed -->
         </ul>
 
         <ul class="marquee-slider__list">
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05313.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05321.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05344.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05345.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05476.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05491.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05494.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP05521.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP06048.jpg" class="img-fluid" alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP06286_46783931875673.jpg" class="img-fluid"
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05313.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05321.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05344.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05345.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05476.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05491.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05494.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05521.jpg" class="img-fluid" alt=""></li>
+
+            <!-- Add more items as needed -->
+        </ul>
+        <ul class="marquee-slider__list">
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_7538.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/IMG_7593.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP07216.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP05280.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP09376.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP07287 (1).jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP06048.jpg" class="img-fluid" alt=""></li>
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP06286_46783931875673.jpg" class="img-fluid"
                                                         alt=""></li>
-            <li class="marquee-slider__list--item"><img src="img/slide/MNP07134_46786462029839 (1).jpg"
+            <li class="marquee-slider__list--item"><img loading="lazy" src="img/slide/MNP07134_46786462029839 (1).jpg"
                                                         class="img-fluid" alt=""></li>
-            <!-- Add more items as needed -->
         </ul>
 
     </div>
@@ -544,53 +569,40 @@
     <div class="container my-5">
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-6 py-5">
                 <div class="col-md-12">
-                    <h2 class="h2">Naruči Ovde</h2><br>
+                    <h2 class="h2 text-center text-md-start">Naruči Ovde <svg style="height: 1.6rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M32 480c0 17.7 14.3 32 32 32s32-14.3 32-32V272H32V480zM224 320c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-17.7-14.3-32-32-32s-32 14.3-32 32v64zm-64 64c17.7 0 32-14.3 32-32V304c0-17.7-14.3-32-32-32s-32 14.3-32 32v48c0 17.7 14.3 32 32 32zm160-96c0 17.7 14.3 32 32 32s32-14.3 32-32V224c0-17.7-14.3-32-32-32s-32 14.3-32 32v64zm-96-88l0 .6c9.4-5.4 20.3-8.6 32-8.6c13.2 0 25.4 4 35.6 10.8c8.7-24.9 32.5-42.8 60.4-42.8c11.7 0 22.6 3.1 32 8.6V160C384 71.6 312.4 0 224 0H162.3C119.8 0 79.1 16.9 49.1 46.9L37.5 58.5C13.5 82.5 0 115.1 0 149v27c0 35.3 28.7 64 64 64h88c22.1 0 40-17.9 40-40s-17.9-40-40-40H96c-8.8 0-16-7.2-16-16s7.2-16 16-16h56c39.8 0 72 32.2 72 72z"/></svg></h2><br>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-12">
+                <div class="row justify-content-center justify-content-md-start">
+                    <div class="col-5">
                         <a href="https://wolt.com/sr/srb/novi_sad/restaurant/garaa-kamion-food-truck">
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-md-3"><img src="img/Wolt.svg" alt="" class="w-100 order-section"></div>
-                            <div class="col-md-9">
-                                https://wolt.com/sr/srb/novi_sad/restaurant/garaa-kamion-food-truck
-                            </div>
-                        </div>
+                            <img src="img/Wolt.svg" alt="" class="w-100 order-section">
                         </a>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-5">
                         <a href="https://misterd.rs/place/kamion-garaza-kamion-food-truck-dostava">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-3"> <img src="img/mrd_app-logo.svg" alt="" class="w-100 order-section"></div>
-                                <div class="col-md-9">
-                                    https://misterd.rs/place/kamion-garaza-kamion-food-truck-dostava
-                                </div>
-                            </div>
+                            <img src="img/mrd_app-logo.svg" alt="" class="w-100 order-section">
                         </a>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-5">
                         <a href="tel:+38162656490" class="">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-3"> <img src="img/phone-1.svg" class="w-100 p-2 bg-light order-section rounded-1" alt=""></div>
-                                <div class="col-md-9">
-                                    Dostava 062/656-490
-                                </div>
-                            </div>
+                            <svg class="w-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm90.7 96.7c9.7-2.6 19.9 2.3 23.7 11.6l20 48c3.4 8.2 1 17.6-5.8 23.2L168 231.7c16.6 35.2 45.1 63.7 80.3 80.3l20.2-24.7c5.6-6.8 15-9.2 23.2-5.8l48 20c9.3 3.9 14.2 14 11.6 23.7l-12 44C336.9 378 329 384 320 384C196.3 384 96 283.7 96 160c0-9 6-16.9 14.7-19.3l44-12z"/></svg>
+
                         </a>
                     </div>
+                    <div class="col-5">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeleZhnnMAtf5Z9nAgOCm-OCehDIkXSjlqM1rGu1Ocfewtoew/viewform">
+                            <svg class="w-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 75.2v361.7c0 24.3-19 43.2-43.2 43.2H43.2C19.3 480 0 461.4 0 436.8V75.2C0 51.1 18.8 32 43.2 32h361.7c24 0 43.1 18.8 43.1 43.2zm-37.3 361.6V75.2c0-3-2.6-5.8-5.8-5.8h-9.3L285.3 144 224 94.1 162.8 144 52.5 69.3h-9.3c-3.2 0-5.8 2.8-5.8 5.8v361.7c0 3 2.6 5.8 5.8 5.8h361.7c3.2 .1 5.8-2.7 5.8-5.8zM150.2 186v37H76.7v-37h73.5zm0 74.4v37.3H76.7v-37.3h73.5zm11.1-147.3l54-43.7H96.8l64.5 43.7zm210 72.9v37h-196v-37h196zm0 74.4v37.3h-196v-37.3h196zm-84.6-147.3l64.5-43.7H232.8l53.9 43.7zM371.3 335v37.3h-99.4V335h99.4z"/></svg>
 
+                        </a>
+                    </div>
 
                 </div>
             </div>
 
-            <div class="col-md-6 px-md-5">
+            <div class="col-md-6 px-md-5 py-5">
                 <div class="h1 text-center">Top Rated</div>
-                <style>
-                    .gold-star svg{
-                        color : gold;
-                    }
-                </style>
+
                 <div class="d-flex justify-content-center align-items-center gold-star">
                     <div class="col-1"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg></div>
                     <div class="col-1"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg></div>
@@ -641,10 +653,9 @@
                 <div class="h3">KONTAKT:</div>
                 <p>Email <a href="kamion.foodtruck@gmail.com">kamion.foodtruck@gmail.com</a></p>
                 <p>Ili preko drustvenih mreža</p>
-                <p>Instagram <a href="https://www.instagram.com/kamion_food_truck/">https://www.instagram.com/kamion_food_truck/</a>
+                <p>Instagram <a href="https://www.instagram.com/kamion_food_truck/">@kamion_food_truck</a>
                 </p>
-                <p>Facebook <a
-                        href="https://www.facebook.com/kamion.food/">https://www.facebook.com/kamion.food/</a>
+                <p>Facebook <a href="https://www.facebook.com/kamion.food/">kamion.food</a>
                 </p>
 
             </div>
@@ -691,8 +702,8 @@
 <script src="./js/marquee.js"></script>
 <script>
     $('.marquee').marqueeSlider([
-        {sensitivity: 0.1, repeatItems: true},
-        {sensitivity: 0.5, repeatItems: true},
+        {sensitivity: 0.4, repeatItems: true},
+        {sensitivity: 0.4, repeatItems: true},
     ]);
 
 
